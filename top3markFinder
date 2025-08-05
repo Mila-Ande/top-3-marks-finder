@@ -1,0 +1,33 @@
+#include <iostream>
+#include <algorithm>
+using namespace std
+
+const int numberOfmarks = 10;
+
+void topThree(int marks[], int numMarks){
+	 sort(marks, marks + numMarks, greater<int>());
+
+	cout<< “The top three marks are: “;
+	for (int x = 0; x < 3; ++x){
+		cout << marks [x] << “ “;
+	}
+	cout << endl;
+} 
+
+int main(){
+	int finalMarks[numberOfmarks];
+
+	cout << “Please enter ” << numberOfmarks << “final marks: ” << endl;
+	for (int x = 0; x < numberOfmarks; ++x){
+		cout << “The mark is “ << x + 1 << “: ”;
+		cin >> finalMarks[x]
+	}
+
+	cout << “The final marks are: “;
+	for (int x = 0; x < numberOfmarks; ++x){
+		cout <<finalMarks[x] << “ ”;
+	}
+	cout << endl;
+	topThree (finalMarks, numberOfmarks);
+	return 0;
+}
